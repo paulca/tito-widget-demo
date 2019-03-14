@@ -3,7 +3,16 @@
 
 <head>
 	<title>Widget Demo</title>
-  <script src='https://js.staging.tito.io/v2?key=public_test_LcM97yHhopFCxRPdBmxF' async></script>
+	<script>
+		var shim = function(name) { return function() { console.log(name, arguments) } }
+		window.Trialfire = {
+			identify: shim("[trialfire identify]"),
+			track: shim("[trialfire track]")
+		}
+		window.fbq = shim("[facebook]")
+		window.dataLayer = []
+	</script>
+  <script src='https://js.staging.tito.io/v2/with/gtm,inline,facebook,trialfire?key=public_test_LcM97yHhopFCxRPdBmxF' async></script>
   <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16" />
 	<meta charset="utf-8"  />
