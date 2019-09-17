@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5VJ8W5T");
+    </script>
+    <!-- End Google Tag Manager -->
+    <title>Widget Demo</title>
+    <script>
+      var shim = function(name) {
+        return function() {
+          console.log(name, arguments);
+        };
+      };
+      window.Trialfire = {
+        identify: shim("[trialfire identify]"),
+        track: shim("[trialfire track]")
+      };
+      window.fbq = shim("[facebook]");
+    </script>
+    <script
+      src="https://js.tito.io/v2/with/gtm,inline,facebook,trialfire?key=public_test_LcM97yHhopFCxRPdBmxF"
+      async
+    ></script>
 
-<head>
-	<title>Widget Demo</title>
-  <script src='https://js.tito.io/v2' async></script>
-  <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16" />
-	<meta charset="utf-8"  />
-  <style media="screen">
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <meta charset="utf-8" />
+    <style media="screen">
       .content {
         text-align: center;
         max-width: 700px;
@@ -28,23 +67,48 @@
         background: #8f78c9 !important;
         border-color: #8f78c9 !important;
       }
-  </style>
-</head>
+    </style>
+  </head>
 
-<body>
-     <div class="content">
-       <a href="/tito-widget-demo/#/" onclick="location.reload()"><img src="https://collisionconf.com/wp-content/themes/blueprint/images/branding/collision/coll-dark.svg" width="125"></a>
-       <h1>Get your ticket now</h1>
-       <p>Try out our new widget in test mode below. Use card number <code>4242 4242 4242 4242</code>, expiry date <code>01/20</code> and CVV <code>123</code>.</p>
-     </div>
-     <tito-widget event="paulca/awesomeconf"></tito-widget>
-	<hr>
-     <div class="content">
-       <h2>Try this…</h2>
-       <p>Add <a href="#/?discount_code=half-price" onclick="location.reload()">?discount_code=half-price</a> to the end of the URL to apply a 50% discount.</p>
-       <p>Add <a href="#/?locale=es" onclick="location.reload()">?locale=es</a> to the end of the URL to display the widget in Spanish.</p>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5VJ8W5T"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="content">
+      <a href="/tito-widget-demo/#/" onclick="location.reload()"
+        ><img
+          src="https://collisionconf.com/wp-content/themes/blueprint/images/branding/collision/coll-dark.svg"
+          width="125"
+      /></a>
+      <h1>Get your ticket now</h1>
+      <p>
+        Try out our new widget in test mode below. Use card number
+        <code>4242 4242 4242 4242</code>, expiry date <code>01/20</code> and CVV
+        <code>123</code>.
+      </p>
     </div>
-
-
-</body>
+    <tito-widget event="paulca/awesomeconf"></tito-widget>
+    <hr />
+    <div class="content">
+      <h2>Try this…</h2>
+      <p>
+        Add
+        <a href="#/?discount_code=half-price" onclick="location.reload()"
+          >?discount_code=half-price</a
+        >
+        to the end of the URL to apply a 50% discount.
+      </p>
+      <p>
+        Add <a href="#/?locale=es" onclick="location.reload()">?locale=es</a> to
+        the end of the URL to display the widget in Spanish.
+      </p>
+    </div>
+  </body>
 </html>
